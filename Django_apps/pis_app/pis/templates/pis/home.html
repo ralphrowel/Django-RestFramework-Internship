@@ -1,0 +1,13 @@
+{% extends "pis/base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="card text-center">
+  <div class="card-body">
+    <h1>Welcome to Person Info System</h1>
+    <p class="lead">A simple app to manage your personal info</p>
+    <a class="btn btn-primary" href="{% url 'register' %}">Register</a>
+    <a class="btn btn-success" href="{% url 'login' %}">Login</a>
+  </div>
+</div>
+{% endblock %}
