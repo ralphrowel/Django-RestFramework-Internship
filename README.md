@@ -10,3 +10,7 @@ It includes authentication, CRUD operations, API testing, and auto-generated doc
 - **Order Management** API (create, list, update, delete)
 - **CRUD Operations** with proper permissions
 - **Unit Testing** using `pytest`
+
+## Activity Overview
+
+![Ralph's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=ralphrowel&theme=tokyo-night)
