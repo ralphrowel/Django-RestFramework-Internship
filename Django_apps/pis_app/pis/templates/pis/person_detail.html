@@ -1,0 +1,16 @@
+{% extends "pis/base.html" %}
+
+{% block content %}
+<h2>My Profile</h2>
+
+<p><strong>Username:</strong> {{ request.user.username }}</p>
+<p><strong>Email:</strong> {{ request.user.email }}</p>
+<p><strong>First Name:</strong> {{ person.person_firstname }}</p>
+<p><strong>Middle Name:</strong> {{ person.person_middlename }}</p>
+<p><strong>Last Name:</strong> {{ person.person_lastname }}</p>
+<p><strong>Age:</strong> {{ person.person_age }}</p>
+<p><strong>Gender:</strong> {{ person.get_person_gender_display }}</p>
+<p><strong>Contact:</strong> {{ person.person_contact }}</p>
+
+<a href="{% url 'my_profile' %}" class="btn btn-primary">Edit Profile</a>
+{% endblock %}

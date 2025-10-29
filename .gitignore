@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.sqlite3
+.env
+docker/.env
+venv/
+.env.* 
+/staticfiles/
+postgres_data/

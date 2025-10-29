@@ -1,0 +1,23 @@
+# docker/Dockerfile
+FROM python:3.12-slim
+
+# Prevent Python from writing pyc files & using stdout buffering
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+# Install build tools if needed for pip packages
+RUN apt-get update && apt-get install -y build-essential && rm -rf /var/lib/apt/lists/*
+
+# Copy and install dependencies
+COPY ../requirements.txt /app/requirements.txt
+RUN pip install --upgrade pip setuptools wheel && pip install -r /app/requirements.txt
+
+# Copy the project code
+COPY .. /app
+
+EXPOSE 8000
+
+# Start Django server
+CMD ["python", "applications/project/manage.py", "runserver", "0.0.0.0:8000"]
